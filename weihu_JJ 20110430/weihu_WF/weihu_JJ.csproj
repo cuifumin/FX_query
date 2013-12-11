@@ -1,0 +1,187 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BBFFB80-C74D-4054-BD5E-F6E54F3CC267}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>weihu_fx</RootNamespace>
+    <AssemblyName>weihu_f</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1Chart.2, Version=2.0.20071.17032, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BroadIPAndPositionKUtil.cs" />
+    <Compile Include="ConnectionUtil.cs" />
+    <Compile Include="ConvertToChina.cs" />
+    <Compile Include="ConvertUtil.cs" />
+    <Compile Include="DataTemplateUtil.cs" />
+    <Compile Include="frmShowTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowTop.Designer.cs">
+      <DependentUpon>frmShowTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlDAO.cs" />
+    <Compile Include="ShowAlarmData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAlarmData.Designer.cs">
+      <DependentUpon>ShowAlarmData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringUtil.cs" />
+    <Compile Include="全部数据查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="全部数据查询.Designer.cs">
+      <DependentUpon>全部数据查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForm.Designer.cs">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmShowTop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmShowTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAlarmData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowAlarmData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="全部数据查询.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>全部数据查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="异物数据解析.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>异物数据解析.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="错误提示.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>错误提示.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="风数据解析.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>风数据解析.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PositionAndStationUtil.cs" />
+    <Compile Include="异物数据解析.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="异物数据解析.Designer.cs">
+      <DependentUpon>异物数据解析.cs</DependentUpon>
+    </Compile>
+    <Compile Include="错误提示.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="错误提示.Designer.cs">
+      <DependentUpon>错误提示.cs</DependentUpon>
+    </Compile>
+    <Compile Include="风数据解析.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="风数据解析.Designer.cs">
+      <DependentUpon>风数据解析.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nolines_plus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nolines_minus.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
